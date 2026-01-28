@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.neon-panel {
+  background: radial-gradient(circle at top, rgba(59, 130, 246, 0.22), transparent 55%),
+    rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  box-shadow: 0 0 28px rgba(59, 130, 246, 0.2);
+}
+
+canvas {
+  display: block;
+}
