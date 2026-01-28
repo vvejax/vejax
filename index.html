@@ -3,15 +3,73 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>React Calculator</title>
+    <title>Neon Tetris</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div id="root"></div>
+    <div class="app">
+      <header class="header">
+        <div>
+          <p class="eyebrow">Neon</p>
+          <h1>Tetris Pulse</h1>
+        </div>
+        <button id="new-game" class="btn primary">Новая игра</button>
+      </header>
 
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script type="text/babel" src="app.jsx"></script>
+      <section class="panel">
+        <div class="status-row">
+          <span id="status-label">Нажмите любую клавишу для старта</span>
+          <span id="audio-label">Audio On</span>
+        </div>
+        <div class="layout">
+          <div class="board-wrap">
+            <canvas id="board" width="280" height="560"></canvas>
+            <div id="overlay" class="overlay hidden"></div>
+          </div>
+
+          <aside class="sidebar">
+            <div class="card">
+              <p class="card-title">Score</p>
+              <p class="score" id="score">0</p>
+              <div class="stats">
+                <div>
+                  <p class="card-title">Level</p>
+                  <p id="level">0</p>
+                </div>
+                <div>
+                  <p class="card-title">Lines</p>
+                  <p id="lines">0</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <p class="card-title">Hold</p>
+              <div class="mini" id="hold"></div>
+            </div>
+
+            <div class="card">
+              <p class="card-title">Next</p>
+              <div class="mini-list" id="next"></div>
+            </div>
+
+            <div class="card">
+              <p class="card-title">Controls</p>
+              <div class="controls">
+                <div><span>Move</span><span>← →</span></div>
+                <div><span>Soft Drop</span><span>↓</span></div>
+                <div><span>Hard Drop</span><span>Space</span></div>
+                <div><span>Rotate</span><span>↑ / Z</span></div>
+                <div><span>Hold</span><span>C</span></div>
+                <div><span>Pause</span><span>P</span></div>
+                <div><span>Mute</span><span>M</span></div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
   </body>
 </html>
