@@ -164,7 +164,7 @@ export default function App() {
           <h1 className="text-2xl font-bold bg-gradient-to-r from-pink-300 via-cyan-300 to-emerald-300 text-transparent bg-clip-text">
             Симулятор продуктового PM (20 раундов)
           </h1>
-          <p className="text-slate-200 mt-2">Яркий тренажёр trade-off'ов: рост, retention, monetization и UX.</p>
+          <p className="text-slate-200 mt-2">Яркий тренажёр trade-off&apos;ов: рост, retention, monetization и UX.</p>
 
           {!isFinished ? (
             <>
